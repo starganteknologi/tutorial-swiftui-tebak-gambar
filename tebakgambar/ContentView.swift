@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var gambarBatik = ["geblekrenteng-kulonprogo" , "gentongan-madura" , "kawung-jateng" , "keraton-yogyakarta" , "megamendung-cirebot" , "parang-jawa" , "sedapur-magetan" , "simbut-banten" , "sogan-solo" , "tujuhrupa-pekalongan"]
     var body: some View {
         Image("kawung-jateng")
     }
