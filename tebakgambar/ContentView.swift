@@ -11,7 +11,7 @@ struct ContentView: View {
     var gambarBatik = ["geblekrenteng-kulonprogo" , "gentongan-madura" , "kawung-jateng" , "keraton-yogyakarta" , "megamendung-cirebot" , "parang-jawa" , "sedapur-magetan" , "simbut-banten" , "sogan-solo" , "tujuhrupa-pekalongan"]
     var jawabanBenar = Int.random(in: 0...2)
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             VStack {
                 Text("Tap batik motif")
                 Text(gambarBatik[jawabanBenar])
@@ -22,6 +22,8 @@ struct ContentView: View {
                 } label: {
                     Image(gambarBatik[number])
                         .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
             }
         }
