@@ -36,6 +36,16 @@ struct ContentView: View {
             }
         }
     }
+    
+    func batikTapped(_ angka: Int) {
+        if angka == jawabanBenar {
+            judulSkor = "Benar"
+        } else {
+            judulSkor = "Salah"
+        }
+
+        tampilkanSkor = true
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
