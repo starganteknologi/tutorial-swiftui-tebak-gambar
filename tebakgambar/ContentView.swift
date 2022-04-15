@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var judulSkor = ""
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [ .green, .black ]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [ .red, .green ]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack(spacing: 30) {
                 VStack {
@@ -33,6 +33,8 @@ struct ContentView: View {
                             .renderingMode(.original)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                            .shadow(color:.black, radius: 10,x: 10, y: 20)
                     }
                 }
             }
