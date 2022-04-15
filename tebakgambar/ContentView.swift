@@ -20,6 +20,7 @@ struct ContentView: View {
             ], center: .top, startRadius: 200, endRadius: 400)
                 .ignoresSafeArea()
             VStack {
+                Spacer()
                 Text("Tebak Motif batik")
                         .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
@@ -49,9 +50,12 @@ struct ContentView: View {
                 .background(.regularMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 
+                Spacer()
+                Spacer()
                 Text("Skor: ?")
                     .foregroundColor(.white)
                     .font(.title.bold())
+                Spacer()
             }
             
         }
