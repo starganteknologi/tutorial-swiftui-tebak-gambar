@@ -53,7 +53,7 @@ struct ContentView: View {
     }
     
     func acakGambar() {
-      gambarBatik.shuffled()
+      gambarBatik = gambarBatik.shuffled()
       jawabanBenar = Int.random(in: 0...2)
     }
     
