@@ -57,6 +57,7 @@ struct ContentView: View {
                     .font(.title.bold())
                 Spacer()
             }
+            .padding()
             
         }
         .alert(judulSkor, isPresented: $tampilkanSkor) {
