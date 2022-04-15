@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
                 ForEach(0..<3) { number in
                     Button {
-                        // flag was tapped
+                        batikTapped(number)
                     } label: {
                         Image(gambarBatik[number])
                             .renderingMode(.original)
