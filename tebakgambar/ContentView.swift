@@ -19,7 +19,7 @@ struct ContentView: View {
                 .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3),
             ], center: .top, startRadius: 200, endRadius: 400)
                 .ignoresSafeArea()
-            VStack(spacing: 30) {
+            VStack(spacing: 15) {
                 VStack {
                     Text("Tap batik motif")
                         .foregroundColor(.white)
@@ -41,6 +41,10 @@ struct ContentView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.regularMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
         .alert(judulSkor, isPresented: $tampilkanSkor) {
             Button("Lanjut", action: acakGambar)
