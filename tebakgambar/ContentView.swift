@@ -19,32 +19,38 @@ struct ContentView: View {
                 .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3),
             ], center: .top, startRadius: 200, endRadius: 400)
                 .ignoresSafeArea()
-            VStack(spacing: 15) {
-                VStack {
-                    Text("Tap batik motif")
+            VStack {
+                Text("Tebak Motif batik")
+                        .font(.largeTitle.weight(.bold))
                         .foregroundColor(.white)
-                        .font(.subheadline.weight(.heavy))
-                    Text(gambarBatik[jawabanBenar])
-                        .foregroundColor(.white)
-                        .font(.largeTitle.weight(.semibold))
-                }
-                ForEach(0..<3) { number in
-                    Button {
-                        batikTapped(number)
-                    } label: {
-                        Image(gambarBatik[number])
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
-                            .shadow(color:.black, radius: 10,x: 10, y: 20)
+                VStack(spacing: 15) {
+                    VStack {
+                        Text("Tap batik motif")
+                            .foregroundColor(.white)
+                            .font(.subheadline.weight(.heavy))
+                        Text(gambarBatik[jawabanBenar])
+                            .foregroundColor(.white)
+                            .font(.largeTitle.weight(.semibold))
+                    }
+                    ForEach(0..<3) { number in
+                        Button {
+                            batikTapped(number)
+                        } label: {
+                            Image(gambarBatik[number])
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .clipShape(RoundedRectangle(cornerRadius: 5))
+                                .shadow(color:.black, radius: 10,x: 10, y: 20)
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 20)
-            .background(.regularMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            
         }
         .alert(judulSkor, isPresented: $tampilkanSkor) {
             Button("Lanjut", action: acakGambar)
