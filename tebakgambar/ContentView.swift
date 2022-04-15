@@ -35,6 +35,11 @@ struct ContentView: View {
                 }
             }
         }
+        .alert(judulSkor, isPresented: $tampilkanSkor) {
+            Button("Lanjut", action: acakGambar)
+        } message: {
+            Text("Skor kamu adalah ???")
+        }
     }
     
     func batikTapped(_ angka: Int) {
