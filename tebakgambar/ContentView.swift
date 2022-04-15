@@ -15,6 +15,15 @@ struct ContentView: View {
                 Text("Tap batik motif")
                 Text(gambarBatik[jawabanBenar])
             }
+        
+        ForEach(0..<3) { number in
+            Button {
+               // flag was tapped
+            } label: {
+                Image(gambarBatik[number])
+                    .renderingMode(.original)
+            }
+        }
     }
 }
 
