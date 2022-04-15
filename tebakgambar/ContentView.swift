@@ -26,10 +26,9 @@ struct ContentView: View {
                 VStack(spacing: 15) {
                     VStack {
                         Text("Tap batik motif")
-                            .foregroundColor(.white)
+                            .foregroundColor(.secondary)
                             .font(.subheadline.weight(.heavy))
                         Text(gambarBatik[jawabanBenar])
-                            .foregroundColor(.white)
                             .font(.largeTitle.weight(.semibold))
                     }
                     ForEach(0..<3) { number in
