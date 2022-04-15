@@ -49,6 +49,10 @@ struct ContentView: View {
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                Text("Skor: ?")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
             }
             
         }
