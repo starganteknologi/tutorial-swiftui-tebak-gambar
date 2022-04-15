@@ -46,6 +46,12 @@ struct ContentView: View {
 
         tampilkanSkor = true
     }
+    
+    func acakGambar() {
+      gambarBatik.shuffled()
+      jawabanBenar = Int.random(in: 0...2)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
