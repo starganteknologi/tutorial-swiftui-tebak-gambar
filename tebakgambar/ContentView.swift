@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var judulSkor = ""
     var body: some View {
         ZStack {
-            Color.black
+            LinearGradient(gradient: Gradient(colors: [ .green, .black ]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack(spacing: 30) {
                 VStack {
