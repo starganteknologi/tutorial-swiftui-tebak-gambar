@@ -17,7 +17,9 @@ struct ContentView: View {
             VStack(spacing: 30) {
                 VStack {
                     Text("Tap batik motif")
+                        .foregroundColor(.white)
                     Text(gambarBatik[jawabanBenar])
+                        .foregroundColor(.white)
                 }
                 ForEach(0..<3) { number in
                     Button {
