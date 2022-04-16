@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var judulSkor = ""
     @State private var skor = 0
     @State private var pertanyaanKe = 0
+    @State private var isiAlert = ""
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -54,7 +55,7 @@ struct ContentView: View {
                 
                 Spacer()
                 Spacer()
-                Text("Skor: ?")
+                Text("Skor: \(skor)")
                     .foregroundColor(.white)
                     .font(.title.bold())
                 Spacer()
@@ -72,8 +73,10 @@ struct ContentView: View {
     func batikTapped(_ angka: Int) {
         if angka == jawabanBenar {
             judulSkor = "Benar"
+            skor += 1
         } else {
             judulSkor = "Salah"
+            isiAlert = "Motif yang kamu tap adalah \(gambarBatik[angka])"
         }
 
         tampilkanSkor = true
