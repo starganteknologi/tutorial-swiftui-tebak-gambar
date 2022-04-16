@@ -55,7 +55,7 @@ struct ContentView: View {
                 
                 Spacer()
                 Spacer()
-                Text("Skor: \(skor)")
+                Text("Skor: \(skor) / \(pertanyaanKe)")
                     .foregroundColor(.white)
                     .font(.title.bold())
                 Spacer()
@@ -64,7 +64,11 @@ struct ContentView: View {
             
         }
         .alert(judulSkor, isPresented: $tampilkanSkor) {
-            Button("Lanjut", action: acakGambar)
+            if ( pertanyaanKe >= gambarBatik.count ) {
+                Button("Mulai lagi", action: resetPermainan )
+            } else {
+                Button("Lanjut", action: acakGambar)
+            }
         } message: {
             Text(isiAlert)
         }
@@ -89,6 +93,12 @@ struct ContentView: View {
       jawabanBenar = Int.random(in: 0...2)
     }
     
+    func resetPermainan() {
+        pertanyaanKe = 0
+        skor = 0
+        acakGambar()
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
