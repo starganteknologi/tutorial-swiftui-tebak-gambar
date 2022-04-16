@@ -80,6 +80,7 @@ struct ContentView: View {
     }
     
     func acakGambar() {
+        pertanyaanKe += 1
       gambarBatik = gambarBatik.shuffled()
       jawabanBenar = Int.random(in: 0...2)
     }
