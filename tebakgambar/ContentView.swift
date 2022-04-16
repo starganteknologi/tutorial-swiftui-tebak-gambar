@@ -66,7 +66,7 @@ struct ContentView: View {
         .alert(judulSkor, isPresented: $tampilkanSkor) {
             Button("Lanjut", action: acakGambar)
         } message: {
-            Text("Skor kamu adalah ???")
+            Text(isiAlert)
         }
     }
     
@@ -74,6 +74,7 @@ struct ContentView: View {
         if angka == jawabanBenar {
             judulSkor = "Benar"
             skor += 1
+            isiAlert = "Skor kamu adalah \(skor)";
         } else {
             judulSkor = "Salah"
             isiAlert = "Motif yang kamu tap adalah \(gambarBatik[angka])"
