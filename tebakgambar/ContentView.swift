@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var jawabanBenar = Int.random(in: 0...2)
     @State private var tampilkanSkor = false
     @State private var judulSkor = ""
+    @State private var skor = 0
+    @State private var pertanyaanKe = 0
     var body: some View {
         ZStack {
             RadialGradient(stops: [
