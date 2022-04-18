@@ -52,12 +52,7 @@ struct ContentView: View {
                         Button {
                             batikTapped(number)
                         } label: {
-                            Image(gambarBatik[number])
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .clipShape(RoundedRectangle(cornerRadius: 5))
-                                .shadow(color:.black, radius: 10,x: 10, y: 20)
+                            Gambarbatik(nama:gambarBatik[number])
                         }
                     }
                 }
