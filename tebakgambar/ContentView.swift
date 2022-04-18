@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct Gambarbatik: View {
+    var nama: String
+    
     var body: some View {
-        Image(systemName: "pencil")
+        Image(nama)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
+            .shadow(color:.black, radius: 10,x: 10, y: 20)
     }
 }
 
