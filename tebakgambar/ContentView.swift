@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct Gambarbatik: View {
+    var body: some View {
+        Image(systemName: "pencil")
+    }
+}
+
 struct ContentView: View {
     @State private var gambarBatik = ["geblekrenteng-kulonprogo" , "gentongan-madura" , "kawung-jateng" , "keraton-yogyakarta" , "megamendung-cirebon" , "parang-jawa" , "sedapur-magetan" , "simbut-banten" , "sogan-solo" , "tujuhrupa-pekalongan"].shuffled()
     @State private var jawabanBenar = Int.random(in: 0...2)
