@@ -119,6 +119,12 @@ struct FramePermainan: ViewModifier {
     }
 }
 
+extension View {
+    func framePermainan() -> some View{
+        modifier(FramePermainan())
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
